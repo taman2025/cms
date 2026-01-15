@@ -11,7 +11,7 @@ const Developers = () => {
 
   // 1. Fetch Developers
   useEffect(() => {
-    fetch("https://community-backend-xyz.onrender.comapi/developers")
+    fetch("https://cms-s2ro.onrender.com/api/developers")
       .then((res) => res.json())
       .then((data) => setDevelopers(data));
   }, []);
@@ -20,7 +20,7 @@ const Developers = () => {
   const handleAddDeveloper = () => {
     const newDev = { fullName, email, role, avatarUrl: "" };
 
-    fetch("https://community-backend-xyz.onrender.com/api/developers", {
+    fetch("https://cms-s2ro.onrender.com/api/developers", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newDev),

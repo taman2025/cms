@@ -8,12 +8,12 @@ const CommunityDetails = () => {
 
   useEffect(() => {
     // 1. Fetch Community Details
-    fetch(`https://community-backend-xyz.onrender.com/api/communities/${id}`)
+    fetch(`https://cms-s2ro.onrender.com/api/communities/${id}`)
       .then((res) => res.json())
       .then((data) => setCommunity(data));
 
     // 2. Fetch All Projects (We will filter them below)
-    fetch("https://community-backend-xyz.onrender.com/api/projects")
+    fetch("https://cms-s2ro.onrender.com/api/projects")
       .then((res) => res.json())
       .then((data) => setProjects(data));
   }, [id]);
