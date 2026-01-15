@@ -10,7 +10,7 @@ const Communities = () => {
   const [description, setDescription] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/communities")
+    fetch("https://community-backend-xyz.onrender.com/api/communities")
       .then((res) => res.json())
       .then((data) => setCommunities(data));
   }, []);
@@ -18,7 +18,7 @@ const Communities = () => {
   const handleAddCommunity = () => {
     const newComm = { name, description };
 
-    fetch("http://localhost:8080/api/communities", {
+    fetch("https://community-backend-xyz.onrender.comapi/communities", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newComm),

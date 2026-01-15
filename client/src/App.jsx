@@ -12,14 +12,14 @@ const Dashboard = () => {
   const [newTitle, setNewTitle] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/projects")
+    fetch("https://community-backend-xyz.onrender.com/api/projects")
       .then((res) => res.json())
       .then((data) => setProjects(data));
   }, []);
 
   const handleAddProject = () => {
     const projectData = { title: newTitle, status: "ACTIVE" };
-    fetch("http://localhost:8080/api/projects", {
+    fetch("https://community-backend-xyz.onrender.com/api/projects", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(projectData),
